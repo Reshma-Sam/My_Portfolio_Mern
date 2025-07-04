@@ -15,14 +15,14 @@ app.use(express.json())
 
 // Static Files access
 // -------------------
-app.use(express.static(path.join(__dirname, '../ReshmaPortfolio/dist')))
+app.use(express.static(path.join(__dirname, '../clinet/dist')))
 
 //Routes
 //------
 app.use('/api/v1/portfolio',portfolioRoutes)
 
 app.get('*', function(req,res){
-    res.sendFile(path.join(__dirname, "../ReshmaPortfolio/dist/index.html"))
+    res.sendFile(path.join(__dirname, "../clinet/dist/index.html"))
 })
 
 //Port
