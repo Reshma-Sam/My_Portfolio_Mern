@@ -1,0 +1,90 @@
+.home-container {
+    height: 100vh;
+    color: white;
+    margin-left: 100px;
+}
+
+.home-content h2 {
+    padding:5px;
+    padding-top: 425px;
+    padding-left: 75px;
+    color: #3b8ff3;
+}
+
+.home-content h1 {
+    padding: 5px;
+    padding-left: 75px;
+    color: rgb(197, 197, 64);
+}
+
+.home-buttons {
+    margin-left: 62px;
+}
+
+.home-buttons .btn-hire {
+    background-color:#3b8ff3;;
+    color: aliceblue;
+    width: 100px;
+    margin-left: 10px;
+}
+
+.home-buttons .btn-hire:hover{
+    background-color:white;
+    color: #3b8ff3;
+    font-weight:600;
+    width: 150px;
+    transition: 1s;
+}
+
+.home-buttons .btn-resume {
+    background-color:#db3268;
+    color: aliceblue;
+    margin-left: 12px;
+}
+
+.home-buttons .btn-resume:hover {
+    opacity: 80%;
+    font-size: 20px;
+    transition: 1s;
+}
+
+.theme-btn {       /*Light and dark mode */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    background-color: #db3268;
+    margin-top: 20px;
+    text-align: center;
+    position: fixed;
+    right: 0;
+    cursor: pointer;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    z-index: 1;
+}
+
+/* ----------Media Quary---------- */
+
+@media(max-width:500px) {
+    .home-container {
+        padding: 0;
+        margin: 0;
+        margin-top: 30px;
+    }
+    .home-container h2{
+        font-size: 24px;
+    }
+    .home-container h2 {
+        font-size: 24px;
+    }
+}
+
+/* @media (min-width: 500px) and (max-width: 1150px) {
+  .home-content {
+    padding-left: 300px;
+    margin: 0;
+    margin-top: 30px;
+  }
+} */

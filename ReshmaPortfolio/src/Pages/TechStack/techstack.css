@@ -1,0 +1,55 @@
+.techstack {
+    /* padding-left: 150px; */
+    margin-top: 150px 0px;
+    justify-content: center;
+    margin-left: 180px;
+}
+
+.techstack hr {
+    color: #db3268;
+    width: 400px;
+    margin: 10px auto;
+}
+
+.techstack h2 {
+    font-weight: bold;
+    color: #db3268;
+}
+
+.techstack .card {
+    cursor: pointer;
+}
+
+.techstack .tech-icon {
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+.techstack .card:hover {
+    background-color: #db3268;
+    color: aliceblue;
+    border: black;
+    transition: 1s;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+/* ----------Media Quary---------- */
+/* ------------------------------- */
+
+@media screen and (min-width: 992px) {
+    .techstack {
+        margin-left: 200px;
+        /* only if sidebar takes fixed width */
+    }
+}
+
+@media (max-width:500px) {
+    .techstack {
+        padding: 0;
+        margin: 0;
+        margin-top: 30px;
+    }
+    .techstack hr {
+        width:300px
+    }
+}

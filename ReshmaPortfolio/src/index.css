@@ -1,0 +1,25 @@
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* DARK MODE  */
+
+#dark {
+    background-color:#340413;
+    color: aliceblue;
+}
+
+/* Footer Media Query */
+/* -------------------- */
+
+@media(max-width: 500px) {
+    .footer {
+        margin: 0px;
+        padding: 0px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+}
