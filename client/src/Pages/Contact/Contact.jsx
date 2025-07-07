@@ -23,7 +23,7 @@ function Contact() {
             }
             console.log("Hnadle submition details",name, email, msg); // Add before axios.post
 
-            const res = await axios.post('http://localhost:5000/api/v1/portfolio/sendEmail',{name,email,msg})   // not need of adding http because already addedthat in proxy filed in package.json
+            const res = await axios.post(`${BASE_URL}/api/v1/portfolio/sendEmail`,{name,email,msg})   // not need of adding http because already addedthat in proxy filed in package.json
         // Validation
         if(res.data.success) {
             toast.success(res.data.message)
