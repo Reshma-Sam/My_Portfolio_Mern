@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import './about.css';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import aboutImage from "../../assets/Images/Reshma 2.jpg"
 
 function About() {
     const controls = useAnimation();
@@ -28,7 +29,7 @@ function About() {
             >
                 <div className="row">
                     <div className="col-md-6 col-xl-6 col-lg-6 col-xs-12 about-image">
-                        <img src="src/assets/Images/Reshma 2.jpg" alt="profile_pic" />
+                        <img src={aboutImage} alt="profile_pic" />
                     </div>
                     <div className="col-md-6 col-xl-6 col-lg-6 col-xs-12 about-content">
                         <h1>About Me</h1>

@@ -1,6 +1,7 @@
 import React from 'react'
 import './projects.css'
 import { motion } from 'framer-motion';
+import lawLinker from "../../assets/Images/Project_1.png"
 
 function Projects() {
     return (
@@ -21,7 +22,7 @@ function Projects() {
                         >
                             <div className="card-image m-auto">
                                 <span className="card-notify-badge">Full Stack</span>
-                                <img src="src/assets/Images/Project_1.png" alt="Project1" />
+                                <img src={lawLinker} alt="Project1" />
                             </div>
                             <div className="card-image-overlay m-auto mt-3 mb-3">
                                 <span className="card-details-bagde">Node</span>

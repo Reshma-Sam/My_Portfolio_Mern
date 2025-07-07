@@ -6,6 +6,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { toast } from 'react-toastify';
 import axios from "axios";
+import contactImage from '../../assets/Images/ContactMe.png'
 
 function Contact() {
     const[name,setName] = useState("")
@@ -64,7 +65,7 @@ function Contact() {
                                     initial={{ opacity: 0, x: 100 }}
                                     animate={controls}
                                 >
-                                    <img src="src/assets/Images/ContactMe.png" alt="Contact" className='image' />
+                                    <img src={contactImage} alt="Contact" className='image' />
                                 </motion.div>
                             </div>
                         </div>
