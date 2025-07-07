@@ -19,15 +19,13 @@ app.use(express.static(path.join(__dirname, '../client/dist')))
 
 //Routes
 //------
-try {
-  app.use('/api/v1/portfolio', portfolioRoutes);
-} catch (err) {
-  console.error("Route registration failed →", err);
-}
+const staticPath = path.join(__dirname, '../client/dist');
+app.use(express.static(staticPath));
 
-app.get('*', function(req,res){
-    res.sendFile(path.join(__dirname, "../client/dist/index.html"))
-})
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(staticPath, 'index.html'));
+});
+
 
 //Port
 //----
