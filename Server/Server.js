@@ -15,14 +15,18 @@ app.use(express.json())
 
 // Static Files access
 // -------------------
-app.use(express.static(path.join(__dirname, '../clinet/dist')))
+app.use(express.static(path.join(__dirname, '../client/dist')))
 
 //Routes
 //------
-app.use('/api/v1/portfolio',portfolioRoutes)
+try {
+  app.use('/api/v1/portfolio', portfolioRoutes);
+} catch (err) {
+  console.error("Route registration failed →", err);
+}
 
 app.get('*', function(req,res){
-    res.sendFile(path.join(__dirname, "../clinet/dist/index.html"))
+    res.sendFile(path.join(__dirname, "../client/dist/index.html"))
 })
 
 //Port
