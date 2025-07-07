@@ -11,6 +11,7 @@ import {
 import { LiaCertificateSolid } from "react-icons/lia";
 import { Link } from 'react-scroll';
 import { motion } from "framer-motion";
+import profilePic from '../../assets/Images/Reshma.jpg'
 
 
 function Menu({ toggle }) {
@@ -27,7 +28,7 @@ function Menu({ toggle }) {
             transition={{ duration: 0.8 }}
           >
             <motion.img
-              src="src/assets/Images/Reshma.jpg"
+              src= {profilePic}
               alt="Profile pic"
               whileHover={{ scale: 1.1 }}
               transition={{ type: "spring", stiffness: 200 }}
