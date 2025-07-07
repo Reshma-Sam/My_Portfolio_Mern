@@ -5,7 +5,9 @@
 
 .sidebar {
     height: 100vh;
-    background-color: #3f0e1e;
+     background: linear-gradient(to bottom, #3f0e1e 0%, #2a0b16 50%, #000000 100%);
+     /* background: linear-gradient(135deg,#000000, #3f0e1e); */
+
     width: 70px;
     position: fixed;
 }
