@@ -19,6 +19,9 @@ app.use(express.static(path.join(__dirname, '../client/dist')))
 
 //Routes
 //------
+
+app.use('/api/v1/portfolio', portfolioRoutes);
+
 const staticPath = path.join(__dirname, '../client/dist');
 app.use(express.static(staticPath));
 

@@ -7,6 +7,7 @@ import { useInView } from "react-intersection-observer";
 import { toast } from 'react-toastify';
 import axios from "axios";
 import contactImage from '../../assets/Images/ContactMe.png'
+import BASE_URL from "../../utils/api"
 
 function Contact() {
     const[name,setName] = useState("")

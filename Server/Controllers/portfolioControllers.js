@@ -11,6 +11,8 @@ const sendEmailController = async (req, res) => {
             return res.status(400).json({ success: false, message: "Please provide all fields" });
         }
 
+        console.log("sendEmailController hit with data:", req.body);
+
         const message = {
             to: "reshmasamzain@gmail.com",       // Receiver email
             from: "reshmazainsam@gmail.com",     // Sender (must be verified in SendGrid)
