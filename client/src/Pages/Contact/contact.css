@@ -1,7 +1,7 @@
 .contact {
     margin-left: 180px;
     margin-top: 50px 0px;
-    margin-bottom: 60px;;
+    margin-bottom: 60px;
     justify-content: center;
     padding: 50px 0px;
     padding-left: 50px;
@@ -29,17 +29,25 @@
     border-right: 1px solid #e0e0e0;
 }
 
+/* ✅ OR Divider (new) */
+.or-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px; /* space between OR and lines */
+    margin: 20px 0;
+}
+
 .line {
+    flex: 1;
     height: 1px;
-    width: 45%;
     background-color: #e0e0e0;
-    margin-top: 10px;
 }
 
 .or {
-    display: flex;
-    width: 20%;
     font-weight: bold;
+    white-space: nowrap; /* prevents OR wrapping */
 }
 
 ::placeholder {
@@ -52,7 +60,7 @@ input,textarea {
     border: 1px solid lightgray;
     border-radius: 2px;
     margin-top: 5px;
-    width:100%;
+    width: 100%;
     color: #a21844;
     font-size: 6rem;
     letter-spacing: 1px;
@@ -65,11 +73,11 @@ input:focus,textarea:focus {
 
 .button:focus {
     box-shadow: none;
-    outline-width:0px;
+    outline-width: 0px;
 }
 
 .button {
-    background-color:oklch(48.236% 0.16818 7.929);
+    background-color: oklch(48.236% 0.16818 7.929);
     color: white;
     border-radius: 2px;
     margin-top: 15px;
@@ -77,14 +85,12 @@ input:focus,textarea:focus {
 }
 
 .button:hover {
-    background-color:oklch(36.917% 0.10665 5.781);
+    background-color: oklch(36.917% 0.10665 5.781);
     color: white;
     transition: 1s;
 }
 
-/* ----------Media Quary---------- */
-/* ------------------------------- */
-
+/* ----------Media Query---------- */
 @media (max-width:500px) {
     .contact {
         margin: 0;

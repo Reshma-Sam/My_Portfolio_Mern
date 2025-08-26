@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import './certificates.css'
+import './certificates.css';
 import Certificate1 from '../../assets/Images/certificate1.jpg';
 import Certificate2 from '../../assets/Images/certificate2.jpg';
+import Certificate3 from '../../assets/Images/certificate3.jpg'; 
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
@@ -52,7 +53,7 @@ function Certificates() {
                         <img
                             src={Certificate1}
                             className={`card-img-top ${expandedCard === 1 ? 'expanded' : ''}`}
-                            alt="Card 1"
+                            alt="Certificate 1"
                         />
                         <div className="card-body text-center">
                             <h5 className="card-title">NSDC - MERN Stack Development</h5>
@@ -71,10 +72,29 @@ function Certificates() {
                         <img
                             src={Certificate2}
                             className={`card-img-top ${expandedCard === 2 ? 'expanded' : ''}`}
-                            alt="Card 2"
+                            alt="Certificate 2"
                         />
                         <div className="card-body text-center">
                             <h5 className="card-title">ILLINOIS - MERN Stack Development</h5>
+                        </div>
+                    </motion.div>
+
+                    {/* Card 3 (NEW) */}
+                    <motion.div
+                        className="card card-custom"
+                        initial={{ opacity: 0, x: -100 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6 }}
+                        viewport={{ once: true, amount: 0.3 }}
+                        onClick={() => toggleExpand(3)}
+                    >
+                        <img
+                            src={Certificate3}
+                            className={`card-img-top ${expandedCard === 3 ? 'expanded' : ''}`}
+                            alt="Certificate 3"
+                        />
+                        <div className="card-body text-center">
+                            <h5 className="card-title">XYZ Institute - MERN Full Stack</h5>
                         </div>
                     </motion.div>
                 </motion.div>
