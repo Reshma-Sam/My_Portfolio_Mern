@@ -94,7 +94,7 @@ function Certificates() {
                             alt="Certificate 3"
                         />
                         <div className="card-body text-center">
-                            <h5 className="card-title">XYZ Institute - MERN Full Stack</h5>
+                            <h5 className="card-title">Entri-Elevate - MERN Full Stack</h5>
                         </div>
                     </motion.div>
                 </motion.div>
