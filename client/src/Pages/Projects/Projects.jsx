@@ -1,11 +1,14 @@
-import React from 'react'
-import './projects.css'
+import React, { useState } from 'react';
+import './projects.css';
 import { motion } from 'framer-motion';
-import lawLinker from "../../assets/Images/Project_1.png"
-import MyPortfolio from "../../assets/Images/PorfolioProject.png"
+import lawLinker from "../../assets/Images/Project_1.png";
+import MyPortfolio from "../../assets/Images/PorfolioProject.png";
 import Ecommerce from "../../assets/Images/EcommerceProject.png"
+import EcommerceDemo from "../../assets/Video/EcommerceVideo.mp4";
 
 function Projects() {
+    const [showVideo, setShowVideo] = useState(false);
+
     return (
         <>
             <div className="projects" id="Projects">
@@ -96,16 +99,35 @@ function Projects() {
                                 <div className="ad-title">
                                     <h5 className="text-uppercase m-auto ">E-Commerce Website</h5>
                                 </div>
-                                <a className="ad-btn text-center" href="https://your-ecommerce-live-link.com" target="_blank" rel="noreferrer">View</a>
+                                {/* Instead of link, open modal */}
+                                <button 
+                                    className="ad-btn text-center" 
+                                    onClick={() => setShowVideo(true)}>
+                                    View
+                                </button>
                                 <a className="ad-btn2 text-center" href="https://github.com/yourusername/ecommerce" target="_blank" rel="noreferrer">GitHub</a>
                             </div>
                         </motion.div>
                     </div>
-
                 </div>
             </div>
+
+            {/* ---------- Video Modal ---------- */}
+            {showVideo && (
+                <div className="video-modal">
+                    <div className="video-content">
+                        <span className="close-btn" onClick={() => setShowVideo(false)}>&times;</span>
+                        
+                        {/*Local Video Player */}
+                        <video width="100%" height="auto" controls autoPlay>
+                            <source src={EcommerceDemo} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            )}
         </>
     )
 }
 
-export default Projects
+export default Projects;
