@@ -171,21 +171,89 @@
   color: #db3268; /* highlight on hover */
 }
 
+/* ----------- Tablet / Small screens ----------- */
+@media (max-width: 768px) {
+  .projects {
+    margin-left: 0; /* remove left margin */
+    padding: 30px 15px;
+  }
 
-/* ----------Media Quary---------- */
-/* ------------------------------- */
+  .projects hr {
+    width: 70%;
+  }
 
-@media (max-width:500px) {
-    .projects {
-        padding: 0;
-        margin: 0;
-        margin-top: 30px;
-    }
-    .projects hr {
-        width:300px
-    }
-    .projects .card {
-        margin-top: 20px
-    }
+  #ads {
+    margin: 20px 0;
+  }
+
+  .card-project {
+    width: 100%; /* make cards full width */
+    height: auto; /* auto height for better scaling */
+  }
+
+  .projects .card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-image-overlay {
+    font-size: 16px;
+  }
+
+  .ad-btn, .ad-btn2 {
+    width: 80%;
+    font-size: 14px;
+    line-height: 30px;
+  }
+
+  .ad-btn:hover {
+    width: 90%;
+  }
+
+  .ad-btn2:hover {
+    width: 90px;
+  }
 }
+
+/* ----------- Mobile / Very Small screens ----------- */
+@media (max-width: 480px) {
+  .projects h2 {
+    font-size: 1.5rem;
+  }
+
+  .projects p {
+    font-size: 0.9rem;
+    padding: 0 10px;
+  }
+
+  .projects hr {
+    width: 90%;
+  }
+
+  .card-project {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .projects .card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-image-overlay span {
+    font-size: 12px;
+    margin-left: 3px;
+  }
+
+  .ad-btn, .ad-btn2 {
+    width: 100%;
+    font-size: 12px;
+    line-height: 28px;
+  }
+
+  .ad-btn:hover {
+    width: 100%;
+  }
+}
+
 

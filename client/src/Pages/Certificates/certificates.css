@@ -1,85 +1,167 @@
 .certificates {
+  margin: 20px auto;
   margin-left: 180px;
-  margin-top: 50px 0px;
-  justify-content: center;
-  padding-left: 20px;
-  margin-bottom: 50px;
+  padding: 50px 8px;
+  max-width: 1200px;
   background-color: rgba(128, 128, 128, 0.137);
-  padding: 50px 0px;
+  text-align: center;
 }
 
 .certificates hr {
   color: #db3268;
-  width: 400px;
-  margin: 10px auto;
-  padding-bottom: 20px;
+  width: 50%;
+  margin: 10px auto 30px;
 }
 
 .certificates h2 {
   font-weight: bold;
   color: #db3268;
-  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
+.certificates-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 30px;
 }
 
 .certificates .card-custom {
   border: none;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
   border-radius: 10px;
+  overflow: hidden;
+  max-width: 350px;
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .certificates .card-custom:hover {
   transform: scale(1.05);
-  /* Slight zoom-in */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  /* Add shadow effect */
-  cursor: pointer;
 }
 
 .certificates .card-img-top {
-  height: 400px;
-  object-fit: cover;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  transition: 1s;
   width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.certificates .card-img-top.expanded {
+  transform: scale(1.05);
 }
 
 .certificates .card-title {
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-top: 10px;
 }
 
-/* .card-img-top:hover {
-  width:900px;
-    height:600px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
-    transition: 1s;
-    border-radius: 10px;
-    cursor: pointer;
-} */
-
-.card-img-top.expanded {
-  height: 400px;
+.certificates {
+  margin: 20px auto;
+  margin-left: 180px;
+  padding: 50px 8px;
+  max-width: 1200px;
+  background-color: rgba(128, 128, 128, 0.137);
+  text-align: center;
 }
 
-/* ----------Media Quary---------- */
-/* ------------------------------- */
+.certificates hr {
+  color: #db3268;
+  width: 50%;
+  margin: 10px auto 30px;
+}
 
-@media (max-width:500px) {
+.certificates h2 {
+  font-weight: bold;
+  color: #db3268;
+  margin-bottom: 20px;
+}
+
+.certificates-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 30px;
+}
+
+.certificates .card-custom {
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 350px;
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificates .card-custom:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.certificates .card-img-top {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.certificates .card-img-top.expanded {
+  transform: scale(1.05);
+}
+
+.certificates .card-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+/* ---------- Mobile Responsiveness ---------- */
+
+/* Tablets and medium screens */
+@media (max-width: 768px) {
   .certificates {
-    padding: 0;
-    margin: 0;
-    margin-top: 30px;
-  }
-  .certificates hr {
-    width: 300px
-  }
-  .certificates .card-custom:hover {
-    transform: none !important;
-    box-shadow: none !important;
-    cursor: default !important;
+    margin-left: 0; /* override left margin for small screens */
+    padding: 30px 15px; /* reduce padding */
   }
 
+  .certificates-container {
+    gap: 15px; /* slightly smaller gap */
+    padding-left: 0; /* remove extra padding */
+  }
+
+  .certificates .card-custom {
+    max-width: 95%; /* make cards fit screen */
+  }
+
+  .certificates hr {
+    width: 70%; /* reduce hr width */
+  }
 }
+
+/* Small screens / mobile */
+@media (max-width: 480px) {
+  .certificates h2 {
+    font-size: 1.5rem; /* smaller heading */
+  }
+
+  .certificates .card-title {
+    font-size: 1rem; /* smaller card title */
+  }
+
+  .certificates hr {
+    width: 90%; /* nearly full width */
+  }
+
+  .certificates .card-img-top {
+    height: auto; /* make image auto height */
+  }
+}
+
+
